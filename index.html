@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Holiday Lookup</title>
+
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div id="title">
+        <p >Tired of Workdays?</p>
+        <h4>Looking for the nearest Holidays!!</h4>
+        <h2>Global Festivity Finder</h2>
+        <span>Powered by:</span><br>
+        <span>Calendarific Global Holidays API</span>
+    </div>
+
+    <!-- Global Holiday Lookup Form -->
+    <section id="lookup-section">
+        <h3>Country-Specific Holidays of the World</h3>
+    <form id="global-form">
+        <label for="country-input">Country (necessary):</label>
+        <select id="country-input" class="first-choice" onchange="this.className=this.options[this.selectedIndex].className">
+            <option class="first-choice">Please Choose a Country</option>
+        </select>
+
+        <label for="year-input">Year (required):</label>
+        <input type="number" id="year-input" min="1500" max="2049" placeholder="Input year from 1950-2030" onclick="this.select()">
+
+        <label for="month-input">Month (optional):</label>
+        <select id="month-input" class="first-choice" onchange="this.className=this.options[this.selectedIndex].className">
+            <option value="" class="first-choice">Choose Month or leave this option</option>
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+
+        <label for="day-input">Day (optional):</label>
+        <input type="number" id="day-input" min="1" max="31" placeholder="Input day from 1-31 or leave this option" onclick="this.select()">
+
+        <div id="button-container">
+            <input type="submit" id="input-button" value="Get Holidays">
+            <button type="button" id="reset-button">Clear Holidays</button>
+            <button type="button" id="today-button">Use today's date!</button>
+        </div>
+    </form>
+    </section>
+
+    <!-- State-Specific Holiday Lookup Form -->
+    <section id="lookup-section">
+        <h3>State-Specific Holidays of India</h3>
+        <form id="state-form">
+            <div class="form-group">
+                <label for="state-input">State (required):</label>
+                <select id="state-input" class="form-control">
+                    <option value="">Select a State</option>
+                    <option value="AP">Andhra Pradesh</option>
+                    <option value="AR">Arunachal Pradesh</option>
+                    <option value="AS">Assam</option>
+                    <option value="BR">Bihar</option>
+                    <option value="CT">Chhattisgarh</option>
+                    <option value="GA">Goa</option>
+                    <option value="GJ">Gujarat</option>
+                    <option value="HR">Haryana</option>
+                    <option value="HP">Himachal Pradesh</option>
+                    <option value="JK">Jammu and Kashmir</option>
+                    <option value="JH">Jharkhand</option>
+                    <option value="KA">Karnataka</option>
+                    <option value="KL">Kerala</option>
+                    <option value="MP">Madhya Pradesh</option>
+                    <option value="MH">Maharashtra</option>
+                    <option value="NL">Nagaland</option>
+                    <option value="OR">Odisha</option>
+                    <option value="PB">Punjab</option>
+                    <option value="RJ">Rajasthan</option>
+                    <option value="SK">Sikkim</option>
+                    <option value="TN">Tamil Nadu</option>
+                    <option value="TG">Telangana</option>
+                    <option value="TR">Tripura</option>
+                    <option value="UP">Uttar Pradesh</option>
+                    <option value="UK">Uttarakhand</option>
+                    <option value="WB">West Bengal</option>
+                </select>
+            </div>
+           
+          
+           
+                <input type="submit" id="input-button" value="Get Holidays">
+                <button type="button" id="reset-button">Clear Holidays</button>
+                
+            </div>
+        </form>
+    </section>
+
+    <main id="card-container">
+        <!-- Global holiday cards will appear here -->
+    </main>
+
+    <main id="state-card-container">
+        <!-- State-specific holiday cards will appear here -->
+    </main>
+</body>
+</html>

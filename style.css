@@ -1,0 +1,206 @@
+body {
+    margin: 0px;;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(45deg, #2b2424, #352d2a, #302724, #fbc2eb, #a18cd1, #fbc2eb, #fad0c4);
+    
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+}
+
+
+#title {
+    background-color: rgba(0, 5, 1, 0.671);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    color: #f4f3f8;
+}
+
+#title p, #title h4, #title span {
+    margin: 0;
+    padding: 5px 0;
+}
+#title p,#title h4{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+}
+
+#title h2{
+    color: #16a085;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    font-weight: 1000;
+    font-stretch: ultra-expanded;
+    font-size: xx-large;
+}
+#title span{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: aqua;
+}
+
+form, #lookup-section {
+    background: rgba(8, 8, 8, 0.781);
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0px 15px rgba(217, 218, 226, 0.7);
+}
+
+ #lookup-section h3 {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ecf2f5;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+form label{
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: larger;
+    color: #78a807;
+
+}
+
+form input[type="number"], form select, #lookup-section .form-control {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 15px;
+    border: none;
+    background-color: #3f3f3c;
+    color: #fdfbfb;
+    transition: all 0.3s ease;
+}
+
+form input[type="number"]:focus, form select:focus, #lookup-section .form-control:focus {
+    outline: none;
+    background-color: #555;
+    box-shadow: 0 0 5px #df620e, 0 0 10px #3498db;
+}
+
+#button-container, #button-container-state {
+    display: flex ;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+#input-button, #today-button, #reset-button, #state-submit-button {
+    width: 200px;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1abc9c;
+    color: #fff;
+    cursor:cell;
+    transition: all 0.3s ease;
+}
+
+#input-button:hover, #today-button:hover, #reset-button:hover, #state-submit-button:hover {
+    background-color: #a2d418;
+    transform: translateY(-5px);
+    box-shadow: 0 0 120px rgba(157, 233, 157, 0.986);
+}
+
+main#card-container, main#state-card-container {
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 1500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section.card {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    width: 300px;
+    height: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.6s ease;
+}
+
+.card-inner {
+    height: 900%;
+    display: flex;
+    flex-direction : column;
+    justify-content: center;
+}
+
+.card-front {
+    backface-visibility: hidde;
+}
+
+.card-back {
+    display: no
+}
+
+section.card:hover {
+    transform: scale(1.05);
+}
+
+section.card:hover .card-back {
+    display: block;
+}
+/* Add this CSS to your existing stylesheet */
+
+/* Style for the state-specific holiday cards */
+.state-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.state-card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.state-card span {
+    font-weight: bold;
+    color: #555;
+}
+/* Global holiday card styling */
+.global-card {
+    background-color: #f0f8ff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.global-card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #2f4f4f;
+}
+
+.global-card span {
+    font-weight: bold;
+    color: #4682b4;
+}
+
+
+
+
